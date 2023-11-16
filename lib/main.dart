@@ -1,4 +1,8 @@
+import 'package:edy_learner/app_blocs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'app_states.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +14,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Edygrad Learner',
-      theme: ThemeData(
-        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return BlocProvider(
+      create: (context)=> AppBlocs(),
+      child: const  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MyHomePage(
+          title: 'Edygrad Bloc',
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -59,8 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+        
         child: Column(
 
           mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              // '$_counter',
+              "${BlocProvider.of<AppBlocs>(context).state.counter}",
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
