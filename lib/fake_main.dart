@@ -1,9 +1,7 @@
 import 'package:edy_learner/app_blocs.dart';
 import 'package:edy_learner/app_events.dart';
-import 'package:edy_learner/pages/welcome/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'app_states.dart';
 
@@ -19,10 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context)=> AppBlocs(),
-      child: ScreenUtilInit(
-        builder: (context, child)=> const MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: Welcome(),
+      child: const  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MyHomePage(
+
         ),
       ),
     );
