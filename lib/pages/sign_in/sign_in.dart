@@ -1,7 +1,8 @@
 
-import 'package:flutter/cupertino.dart';
+import 'package:edy_learner/pages/sign_in/widgets/sign_in_widget.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -17,14 +18,12 @@ class _SignInState extends State<SignIn> {
       color: Colors.white,
       child: SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              "Log In",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.normal,
-                fontSize: 16.sp,
-              ),
+          appBar: buildAppBar(),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                buildThirdPartyLogin(context),
+              ],
             ),
           ),
         ),
