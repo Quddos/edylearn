@@ -146,11 +146,19 @@ Widget buildLoginAndRegisterButton(String buttonName, String buttonType) {
       height: 50.h,
       width: 325.w,
       decoration: BoxDecoration(
-          color: Colors.blue,
+          color: buttonType == "login"
+              ? AppColors.primaryElement
+              : AppColors.primaryBackground,
           borderRadius: BorderRadius.circular(15.w),
+          border: Border.all(
+              color: buttonType == "login"
+                  ? Colors.transparent
+                  : AppColors.primaryElement),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.1),
+              color: buttonType == "login"
+                  ? AppColors.primaryBackground
+                  : AppColors.primaryElement,
               spreadRadius: 1,
               blurRadius: 2,
               offset: const Offset(0, 1), // changes position of shadow
@@ -160,7 +168,9 @@ Widget buildLoginAndRegisterButton(String buttonName, String buttonType) {
         child: Text(
           buttonName,
           style: TextStyle(
-            color: Colors.white,
+            color: buttonType == "login"
+                ? AppColors.primaryBackground
+                : AppColors.primaryText,
             fontSize: 16.sp,
             fontWeight: FontWeight.bold,
           ),
