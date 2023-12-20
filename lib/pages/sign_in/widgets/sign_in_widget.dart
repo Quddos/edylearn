@@ -69,7 +69,7 @@ Widget buildTextField(String hintText, String textType, String iconName) {
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
-        border: Border.all(color: Colors.black)),
+        border: Border.all(color: AppColors.primaryFourElementText)),
     child: Row(children: [
       Container(
         width: 16.w,
@@ -96,7 +96,7 @@ Widget buildTextField(String hintText, String textType, String iconName) {
                   borderSide: BorderSide(
                 color: Colors.transparent,
               )),
-              hintStyle: const TextStyle(color: Colors.grey
+              hintStyle: const TextStyle(color: AppColors.primaryElementText
                   //color: Colors.grey.withOpacity(0.5)
                   ),
               focusedBorder: const OutlineInputBorder(
@@ -104,7 +104,7 @@ Widget buildTextField(String hintText, String textType, String iconName) {
                 color: Colors.transparent,
               ))),
           style: const TextStyle(
-            color: Colors.black,
+            color: AppColors.primaryText,
             fontFamily: "Aveniri",
             fontWeight: FontWeight.normal,
             fontSize: 14,
@@ -127,10 +127,10 @@ Widget forgotPassword() {
       child: Text(
         "Forgot Password",
         style: TextStyle(
-          color: Colors.black,
+          color: AppColors.primaryText,
           decoration: TextDecoration.underline,
           fontSize: 12.sp,
-          decorationColor: Colors.blue,
+          decorationColor: AppColors.primaryText,
         ),
       ),
     ),
