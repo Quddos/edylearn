@@ -26,7 +26,7 @@ class _SignInState extends State<SignIn> {
                   Center(
                       child: reusableText("Or Login with your Email Account")),
                   Container(
-                    margin: EdgeInsets.only(top: 60.h),
+                    margin: EdgeInsets.only(top: 30.h),
                     padding: EdgeInsets.only(left: 25.w, right: 25.w),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

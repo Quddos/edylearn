@@ -25,6 +25,7 @@ AppBar buildAppBar() {
 
 Widget buildThirdPartyLogin(BuildContext context) {
   return Container(
+    padding: EdgeInsets.only(left: 25.w, right: 25.w),
     margin: EdgeInsets.only(top: 40.h, bottom: 20.h),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -69,7 +70,7 @@ Widget buildTextField(String hintText, String textType, String iconName) {
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(15.w)),
-        border: Border.all(color: AppColors.primaryFourElementText)),
+        border: Border.all(color: AppColors.primaryFourthElementText)),
     child: Row(children: [
       Container(
         width: 16.w,
@@ -170,7 +171,7 @@ Widget buildLoginAndRegisterButton(String buttonName, String buttonType) {
           style: TextStyle(
             color: buttonType == "login"
                 ? AppColors.primaryBackground
-                : AppColors.primaryText,
+                : AppColors.primaryElement,
             fontSize: 16.sp,
             fontWeight: FontWeight.bold,
           ),
